@@ -60,7 +60,7 @@ public class App {
 			}
 		}
 
-		return toDo;
+		return null;
 	}
 
 	public List<Event> getParkSpecialPermits() throws Exception {
@@ -113,12 +113,12 @@ public class App {
 	public Event getFirstEventOfMonth(String month) throws Exception {
 		List<Event> events = getParkSpecialPermits();
 		Event ret = new Event("", "", "", "", "");
-		boolean initial = false;
+		boolean initial = true;
 		for(Event event: events){
 			if(event.getMonth().equals(month)){
 				if(!initial){
 					ret = event;
-					initial = true;
+					initial = false;
 					continue;
 				}
 				DateTime newDate = event.getDateTime();
