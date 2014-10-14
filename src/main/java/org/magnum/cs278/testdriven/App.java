@@ -83,7 +83,6 @@ public class App {
 		return evtsAtLocation;
 	}
 
-
 	public List<Event> getTodaysEvents() throws Exception {
 		List<Event> todaysEvents = new ArrayList<Event>();
 		List<Event> events = getParkSpecialPermits();
@@ -146,7 +145,6 @@ public class App {
 		}
 		return temp;
 	}
-	
 
 	public List<Event> getEventsLargerThan(int i)  throws Exception {
 		// TODO Auto-generated method stub

@@ -5,3 +5,4 @@ build
 .idea/
 .clover/
 *.iml
+/bin/
