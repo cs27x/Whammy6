@@ -1,7 +1,6 @@
 package org.magnum.cs278.testdriven;
 
 import java.net.URL;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import java.util.Calendar;
