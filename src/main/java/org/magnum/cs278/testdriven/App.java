@@ -146,7 +146,6 @@ public class App {
 	}
 
 	public List<Event> getEventsLargerThan(int i)  throws Exception {
-		// TODO Auto-generated method stub
 		List<Event> toDo = new ArrayList<>();
 		List<Event> evts = getParkSpecialPermits();
 		
@@ -171,9 +170,10 @@ public class App {
 		
 		return juneEvents;
 	}
-	
+
+
     public List<Event> getRiverfrontParkSpecialPermits() throws Exception {
-        List<Event> evts = new ArrayList();
+        List<Event> evts = new ArrayList<>();
 
         for (Event evt : getParkSpecialPermits()) {
             if (evt.getLocation().toLowerCase().equals("riverfront park")) {

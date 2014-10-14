@@ -54,4 +54,15 @@ public class AppTestClark {
         }
 
     }
+
+    @Test
+    public void testGetEventsLargerThan() throws Exception {
+        List<Event> evts = app.getEventsLargerThan(30);
+
+        assertTrue("No events returned", evts.size() != 0);
+
+        for (Event e : evts) {
+            assertTrue("Attendance too low", Integer.parseInt(e.getAttendance()) > 30);
+        }
+    }
 }
