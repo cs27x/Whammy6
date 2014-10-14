@@ -3,6 +3,7 @@ package org.magnum.cs278.testdriven;
 
 import java.util.List;
 
+import org.junit.Before;
 import org.magnum.cs278.testdriven.App;
 import org.magnum.cs278.testdriven.Event;
 
@@ -15,9 +16,14 @@ import static org.junit.Assert.assertTrue;
 
 public class AppTest_Jeremey {
 
-	private App app = new App();
-	
-	@Test
+	private App app;
+
+    @Before
+    public void setUp() throws Exception {
+        app = new App();
+    }
+
+    @Test
 	public void TestGetEventsInJune() throws Exception 
 	{
 		List<Event> juneEvents = app.getEventsInJune();
