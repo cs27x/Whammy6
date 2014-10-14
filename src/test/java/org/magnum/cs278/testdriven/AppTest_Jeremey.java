@@ -34,7 +34,7 @@ public class AppTest_Jeremey {
 			assertNotNull(curEvent);
 			assertNotNull(curEvent.getMonth());
 			
-			assertEquals(curEvent.getMonth(),"Jun");
+			assertTrue(curEvent.getMonth().contains("Jun"));
 		}
 	}
 	

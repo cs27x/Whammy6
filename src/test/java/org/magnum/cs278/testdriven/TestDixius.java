@@ -49,7 +49,7 @@ public class TestDixius {
 	@Test
 	public void testGetFirstEventOfMonth() throws Exception
 	{
-		Event event = app.getFirstEventOfMonth("september");
+		Event event = app.getFirstEventOfMonth("Sep-2014");
 		
 			assertNotNull (event);
 			assertNotNull (event.getDate());
@@ -59,7 +59,7 @@ public class TestDixius {
 	@Test
 	public void testGetEventsForMonth() throws Exception
 	{
-		List<Event> events = app.getEventsForMonth("september");
+		List<Event> events = app.getEventsForMonth("Sep-2014");
 		
 		for (Event event : events)
 		{

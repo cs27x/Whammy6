@@ -23,6 +23,13 @@ import com.openpojo.validation.test.impl.SetterTester;
  *
  */
 public class PojoTest {
+    private class CloverFilter extends FilterPackageInfo {
+        @Override
+        public boolean include(PojoClass pojoClass) {
+            return super.include(pojoClass) && !pojoClass.getName().contains("$");
+        }
+    }
+
     // Configured for expectation, so we know when a class gets added or removed.
     private static final int EXPECTED_CLASS_COUNT = 7;
 
@@ -34,7 +41,8 @@ public class PojoTest {
 
     @Before
     public void setup() {
-        pojoClasses = PojoClassFactory.getPojoClasses(POJO_PACKAGE, new FilterPackageInfo());
+
+        pojoClasses = PojoClassFactory.getPojoClasses(POJO_PACKAGE, new CloverFilter());
 
         pojoValidator = new PojoValidator();
 
@@ -58,6 +66,7 @@ public class PojoTest {
     @Test
     public void testPojoStructureAndBehavior() {
         for (PojoClass pojoClass : pojoClasses) {
+            System.out.println(pojoClass.getName());
             pojoValidator.runValidation(pojoClass);
         }
     }

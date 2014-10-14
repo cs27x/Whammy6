@@ -24,10 +24,6 @@ public class AppTestClark {
     public void testGetParkSpecialPermitsByAttendance() throws Exception {
         List<Event> evts = app.getParkSpecialPermitsByAttendance();
 
-        for (Event e : evts) {
-            System.out.println(e.getLocation());
-        }
-
         for (int i = 1; i < evts.size(); ++i) {
             int prev = Integer.parseInt(evts.get(i-1).getAttendance());
             int cur = Integer.parseInt(evts.get(i).getAttendance());
